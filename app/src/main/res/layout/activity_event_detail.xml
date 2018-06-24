@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventDetail">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:navigationIcon="@drawable/ic_back"
+        app:titleTextColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_detail"
+        android:labelFor="@+id/toolbar_detail"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_comments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="15dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edtxt_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Comentar"
+                android:imeOptions="actionDone"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/corner_button_full"
+            android:onClick="newComment"
+            android:text="Comentar"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</RelativeLayout>
